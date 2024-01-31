@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transparent Navbar</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom styles */
+    body {
+      padding-top: 70px; /* Adjust body padding to account for fixed navbar height */
+    }
+    .navbar {
+      transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    }
+    .navbar.transparent.navbar-inverse {
+      background-color: transparent;
+      color: white; /* Text color when transparent */
+    }
+    .navbar.solid.navbar-inverse {
+      background-color: #333; /* Solid background color */
+      color: white; /* Text color when solid */
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top transparent">
+  <div class="container">
+    <a class="navbar-brand" href="#">Your Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h2>Scroll down to see the navbar change</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non eros commodo, eleifend tortor vel, laoreet ipsum. Integer fringilla aliquam ante, non suscipit ligula posuere eu. Nullam at lectus enim. Suspendisse potenti. Vivamus tempus tristique justo vel feugiat. Duis vel massa sed velit pulvinar consequat sit amet nec odio. Duis malesuada tortor a eros dictum, at lacinia arcu tristique. Integer id tortor nec libero condimentum fermentum. Ut imperdiet justo ut libero sollicitudin, eget tristique sapien varius. Curabitur vel elit risus. Ut sit amet sodales tortor. Pellentesque eget velit a eros luctus commodo eu non dui. Curabitur aliquam velit ut ex vehicula, nec fermentum libero consectetur.</p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  // Change navbar background and text color on scroll
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 50) {
+      $('.navbar').addClass('solid');
+    } else {
+      $('.navbar').removeClass('solid');
+    }
+  });
+</script>
+
+</body>
+</html>

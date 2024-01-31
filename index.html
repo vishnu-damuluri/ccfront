@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSTUDIO - CC</title>
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+  />
+    <!-- Bootstrap CSS -->
+    <!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+  background-color: #3a355c;
+}
+
+.masonry-container {
+  margin: 30px;
+}
+
+.masonry-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.masonry-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* ... (Previous CSS code) ... */
+
+.masonry-item .image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 70px 40px 70px; /* Default padding for larger screens */
+  background: linear-gradient(rgba(0, 0, 0, 0), #1f1c30);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  opacity: 1;
+  transition: opacity 0.9s ease-in-out;
+  font-size: 29px;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .masonry-item .image-text {
+    padding: 20px 30px 20px 30px; /* Adjusted padding for medium screens */
+    font-size: 20px; /* Adjusted font size for medium screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .masonry-item .image-text {
+    padding: 15px 20px 15px 20px; /* Adjusted padding for small screens */
+    font-size: 16px; /* Adjusted font size for small screens */
+  }
+}
+
+/* ... (Remaining CSS code) ... */
+
+.masonry-item:hover img {
+  transform: scale(1.1);
+}
+
+.masonry-item:hover .image-text {
+  opacity: 0;
+}
+
+@media (min-width: 576px) {
+  .masonry-container {
+    column-count: 2;
+    column-gap: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .masonry-container {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 992px) {
+  .masonry-container {
+    column-count: 3;
+  }
+}
+.navbar-brand img {
+  max-height: 100px; /* Set the desired maximum height */
+  width: auto;
+}
+.banner {
+  height: 105vh;
+  background: url("assets/1b.png") center/cover no-repeat; /* Replace 'your-background-image.jpg' with your actual background image */
+  color: rgb(255, 255, 255);
+  background-size: 500px 500px;
+  z-index: 2;
+}
+
+.banner h1 {
+  font-size: 3rem; /* Adjust the font size as needed */
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  margin-bottom: 30px;
+}
+
+.banner a {
+  font-size: 1.2rem; /* Adjust the font size as needed */
+}
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Adjust the opacity as needed */
+}
+
+
+
+.register button {
+  --color: #836dac;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  /* margin: 20px; */
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+.register button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.register button:hover {
+  color: #fff;
+}
+
+.register button:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.register button:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.register button:active:before {
+  background: #836dac;
+  transition: background 0s;
+}
+#home #nav .container {
+  max-width: 100vw;
+}
+.scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .transparent-bg {
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.solid-bg {
+    background-color: #1f1c30; /* Set your desired solid background color */
+}
+/* Initial styles for navbar buttons */
+.navbar-transparent .navbar-nav li a {
+    color: #ffffff !important;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: #7b70a5;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #7b70a5);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #7b70a5);
+}
+
+/* .logos:hover .logos-slide {
+  animation-play-state: paused;
+} */
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+ @font-face {
+        font-family: 'Titania';
+        src: 
+             url('assets/titania/Titania-Regular.ttf') format('truetype'),   /* Modern Browsers */
+         
+        /* You can add more src declarations for different font formats */
+    }
+
+    body {
+        font-family: 'Titania', sans-serif; /* Use the font family */
+    }
+
+
+
+
+
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navbar = document.getElementById('myNavbar');
+    
+            function updateNavbarBackground() {
+                if (window.scrollY > 50 || document.body.classList.contains('show-navbar')) {
+                    navbar.classList.add('solid-bg');
+                    navbar.classList.remove('transparent-bg');
+                } else {
+                    navbar.classList.remove('solid-bg');
+                    navbar.classList.add('transparent-bg');
+                }
+            }
+    
+            // Handle scrolling
+            window.addEventListener('scroll', function () {
+                updateNavbarBackground();
+            });
+    
+            // Handle collapsed button click
+            document.querySelector('.navbar-toggler').addEventListener('click', function () {
+                document.body.classList.toggle('show-navbar');
+                updateNavbarBackground();
+            });
+        });
+    </script>
+    
+</head>
+
+<body style="background-color: #1f1c30;">
+
+        <!-- Navbar -->
+        
+    <nav id="myNavbar"class="navbar navbar-expand-md fixed-top" style="background-transparent;">
+        <div class="container my-2">
+          <a class="navbar-brand ml-2 md-2"><img src="assets/cclogob.png" alt="test img"
+         style="width: 170px; height: 50px;"></a>
+          
+          <button
+           class="navbar-toggler ml-2"
+           data-toggle="collapse"
+           data-target="#collapseNav"
+          >
+           <span class="fas fa-bars text-light"></span>
+          </button>
+   
+          <div class="collapse navbar-collapse flex-grow-0 ml-2" id="collapseNav">
+             <div class="navbar-nav">
+              <a href="team.html" class="nav-item nav-link text-light h6 mx-3 my-auto">
+               Team
+              </a>
+              <a href="contact.html" class="nav-item nav-link text-light h6 mx-3 my-auto">
+               Contact
+              </a>
+              <a href="updates.html" class="nav-item nav-link text-light h6 mx-3 my-auto">
+               Updates
+             </a>
+           </div>
+         </div>
+       </div>
+     </nav>
+    
+
+    <!-- banner -->
+    <section>
+    <div class="container banner d-flex align-items-center">
+        <video autoplay preload muted loop poster="video-poster.jpg" id="background-video">
+<!--             <source src="assets/pexels-florian-lovis-5749164 (2160p)4.mp4" type="video/mp4"> -->
+            <source src="assets/cc.mp4" type="video/mp4">
+            <!-- Your browser does not support the video tag. -->
+        </video>
+        <!-- Overlay div for dimming effect -->
+        <div class="overlay"></div>
+    </div>
+
+
+</section>
+    <br>
+
+      <section id="about">
+        <div class="container"> 
+          <div class="row">
+            <div class="col-md-6 my-auto"> 
+              <h2 class="font-weight-italic" style="color:  rgb(255, 255, 255); font-size: xx-large; font-family: 'Titania';">
+                <a style="color: rgb(255, 255, 255); font-family: Titania;" >
+                  Who are
+                </a> 
+                we?</h2>
+              <br>
+                                <p class=" p6" style="color: #fff; font-size: large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">GStudio is a media club of Gitam University and a platform for skillful,
+                                    ambitious, and creative people who showcase their talent and passion for
+                                    photography, cinematography, direction, and screenwriting. We collaborate with other
+                                    student clubs to provide an enriching experience. It hosts master classes with
+                                    renowned film technicians and photo workshops with leading photographers. camera
+                                    brands, and mentors. GStudio also allows students to explore their interests and
+                                    hone their skills in a fun and engaging environment. Its range of activities is an
+                                    excellent way for students to develop their creative talents.
+                                </p>
+            </div>
+            <br>
+          <br>
+          <div class="col-md-6 "> 
+            <br>
+            <a href="https://drive.google.com/file/d/15HuTVpHed7gEZT4hecvNLejtG5uxGL5Z/view?usp=sharing">
+            <img src="assets/cc poster.jpg" class="img-fluid"></a>
+          </div>
+          </div>
+        </div>
+      </section>
+      <br>
+      <a></a>
+      <br>
+      <section id="about">
+        <div class="container"> 
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <a href="https://drive.google.com/file/d/15HuTVpHed7gEZT4hecvNLejtG5uxGL5Z/view?usp=sharing">
+                        <img src="assets/cc poster.jpg" class="img-fluid">
+                    </a>
+                    <br>
+                </div>
+                <br>
+                <div class="col-12 col-md-6 my-auto"> 
+                    <h2 class="font-weight-italic" style="color: rgb(255, 255, 255); font-size: xx-large;">
+                      <br>
+                        <a style="color: rgb(255, 255, 255)">
+                          What is CC</a>
+                    </h2>
+                    <br>
+                    <p class="p1" style="color: #fff;font-size: large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                      GStudio's <a style="font-weight: 300; font-size: x-large; font-family: Titania;">Chalana  Chitram</a> aims to provide the audience with a unique and high-quality 
+                      cinematic experience that combines art and technology to captivate viewers. Creators may learn from experts in the field and
+                       become familiar with cuttingedge filmmaking practices at ChalanaChitram. GStudio has been around for 10 years, a 
+                       significant accomplishment and evidence of the team's commitment and diligence. The celebration this year will
+                        undoubtedly be a memorable occasion and give many more artists a platform to explore the fields of cinema and 
+                        photography. GStudio has been a pioneer in advancing the art of filmmaking during the course of its ten-year 
+                        existence and has assisted in the development of many talented individuals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+ <br>
+ 
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="assets/3m.svg" />
+        <img src="assets/barstool-store.svg" />
+        <img src="assets/budweiser.svg" />
+        <img src="assets/buzzfeed.svg" />
+        <img src="assets/forbes.svg" />
+        <img src="assets/macys.svg" />
+        <img src="assets/menshealth.svg" />
+        <img src="assets/mrbeast.svg" />
+      </div>
+    </div>
+
+    <script>
+      var copy = document.querySelector(".logos-slide").cloneNode(true);
+      document.querySelector(".logos").appendChild(copy);
+    </script>
+    <section id="services">
+        <div class="container">
+            <div class="masonry-container">
+                <!-- Image 1 -->
+                <div class="masonry-item">
+                    <img src="assets/img1.jpg" alt="Image 1">
+                    <div class="image-text" style="color: #fff;">Video Editing Workshop </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="masonry-item">
+                    <img src="assets/img3.jpg" alt="Image 2">
+                    <div class="image-text" style="color: rgb(255, 255, 255);">Photography Workshop</div>
+                </div>
+                <!-- Image 3 -->
+                <div class="masonry-item">
+                    <img src="assets/img2.jpg" alt="Image 3">
+                    <div class="image-text" style="color: rgb(255, 255, 255);">Filming Workshop</div>
+                </div>
+                <!-- Image 4 -->
+                <div class="masonry-item">
+                    <img src="assets/vzj.jpg" alt="Image 4">
+                    <div class="image-text" style="color: azure;">Master classes</div>
+                </div>
+                <!-- Image 5 -->
+                <div class="masonry-item">
+                    <img src="assets/img4.jpg" alt="Image 5">
+                    <div class="image-text" style="color: azure;">Fun events</div>
+                </div>
+                <!-- Image 6 -->
+                <div class="masonry-item">
+                    <img src="assets/img5.jpg" alt="Image 6">
+                    <div class="image-text" style="color: azure;">Interviews</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="register">
+        <div class="container text-center register">
+            <a href="https://good-fox-reliably.ngrok-free.app/ccweb2/index.php"><button> Register
+                </button></a>
+        </div>
+    </section>
+
+    <br>
+    <footer>
+      <div class="container-fluid text-center" style="background-color: #0d0721;">
+        <div class="py-5">
+          <h2 style="color: rgb(255, 255, 255);">Interested in working with Us?</h2>
+          <a href="mailto:leisuretech24@gmail.com?subject=I wanna be part of another tech revolution!" class="btn btn-outline-light btn-lg mt-3">
+            Let's talk
+            </a>
+         </div>
+         <div class="row">
+          <div class="col-12 col-md-4 py-3">
+            <h5 class=" pb-3" style="color: rgb(255, 255, 255);">More links</h5>
+            
+            <a href="#" class="d-block" style="color: rgb(255, 255, 255);">Home</a>
+            <a href="mailto:leisuretech24@gmail.com?subject=I wanna get in Talks with you!" class="d-block" style="color: rgb(255, 255, 255);">Contact Us</a>
+            <a href="mailto:leisuretech24@gmail.com?subject=Here is a suggestion!" class="d-block" style="color: rgb(255, 255, 255);">
+              Write a suggestion!  <i class="fas fa-heart" style="color: rgb(255, 255, 255);"></i>
+            </a>
+            <br>
+            <aclass="d-block" style="color: rgb(255, 255, 255);">
+              leisuretech24@gmail.com
+                <i class="d-block" style="color: rgb(255, 255, 255);"></i>
+            
+            
+          </aclass="d-block"></div>
+          <div class="col-12 col-md-4 text-justify py-3" style="color:rgb(255, 255, 255) ;">
+            <p>
+              We're not just a tech company. We're a team of people who care about your technology and know how to use it to make your life better. Follow us on social media and see us unveil the future of edge computing.
+Join our intern program to be part of building the Technology. 
+            </p>
+          </div>
+          <div class="col-12 col-md-4 py-3">
+            <h5 class="text-info pb-3">Social</h5>
+            <a href="https://twitter.com/Leisuretech24?ref_src=twsrc%5Etfw">
+              <i class="fab fa-twitter h1 d-block" style="color: azure;"></i>
+            </a>
+            <a href="https://www.instagram.com/leisurecomputers">
+              <i class=" fab fa-instagram h1 d-block" style="color: azure;"></i>
+            </a>
+            <a href="youtube.com/@Leisurecomputers">
+              <i class="fas fa-play-circle h1 d-block " style="color: azure;"></i>
+            </a>
+          </div>
+        </div>
+        <div class="text-muted py-3">
+          <p>Copyright © leisurecomputers Pvt.Ltd 2022 | All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSTUDIO - CC</title>
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+  />
+    <!-- Bootstrap CSS -->
+    <!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+  background-color: #f8f9fa;
+}
+
+.masonry-container {
+  margin: 30px;
+}
+
+.masonry-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.masonry-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* ... (Previous CSS code) ... */
+
+.masonry-item .image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 70px 40px 70px; /* Default padding for larger screens */
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(255, 255, 255));
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  opacity: 1;
+  transition: opacity 0.9s ease-in-out;
+  font-size: 29px;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .masonry-item .image-text {
+    padding: 20px 30px 20px 30px; /* Adjusted padding for medium screens */
+    font-size: 20px; /* Adjusted font size for medium screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .masonry-item .image-text {
+    padding: 15px 20px 15px 20px; /* Adjusted padding for small screens */
+    font-size: 16px; /* Adjusted font size for small screens */
+  }
+}
+
+/* ... (Remaining CSS code) ... */
+
+.masonry-item:hover img {
+  transform: scale(1.1);
+}
+
+.masonry-item:hover .image-text {
+  opacity: 0;
+}
+
+@media (min-width: 576px) {
+  .masonry-container {
+    column-count: 2;
+    column-gap: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .masonry-container {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 992px) {
+  .masonry-container {
+    column-count: 3;
+  }
+}
+.navbar-brand img {
+  max-height: 100px; /* Set the desired maximum height */
+  width: auto;
+}
+.banner {
+  height: 105vh;
+  background: url("assets/1b.png") center/cover no-repeat; /* Replace 'your-background-image.jpg' with your actual background image */
+  color: rgb(255, 255, 255);
+  background-size: 500px 500px;
+  z-index: 2;
+}
+
+.banner h1 {
+  font-size: 3rem; /* Adjust the font size as needed */
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  margin-bottom: 30px;
+}
+
+.banner a {
+  font-size: 1.2rem; /* Adjust the font size as needed */
+}
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Adjust the opacity as needed */
+}
+
+
+
+
+
+
+
+
+
+    </style>
+    
+    
+</head>
+
+<body>
+  <br>
+<a></a>
+<br>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top" id="navbar">
+          <div class="container">
+              <!-- Image on the left -->
+              <a class="navbar-brand" href="#">
+                  <img src="assets/cclogob.png" alt="Logo" height="40">
+              </a>
+  
+              <!-- Hamburger menu on the right -->
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+  
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <!-- No nav links here -->
+              </div>
+          </div>
+      </nav>
+     
+    
+
+    <!-- banner -->
+    <section>
+    <div class="container banner d-flex align-items-center">
+        <video autoplay preload muted loop poster="video-poster.jpg" id="background-video">
+<!--             <source src="assets/pexels-florian-lovis-5749164 (2160p)4.mp4" type="video/mp4"> -->
+            <source src="assets/cc.mp4" type="video/mp4">
+            <!-- Your browser does not support the video tag. -->
+        </video>
+        <!-- Overlay div for dimming effect -->
+        <div class="overlay"></div>
+    </div>
+</section>
+    <br>
+
+    <section id="about">
+        <div class="container-fluid text-center ">
+            <!-- <div class="row"> -->
+            <div class="col-md-12">
+                <section class="custom-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>Who are we?</h2>
+                                <p class=" p1">GStudio is a media club of Gitam University and a platform for skillful,
+                                    ambitious, and creative people who showcase their talent and passion for
+                                    photography, cinematography, direction, and screenwriting. We collaborate with other
+                                    student clubs to provide an enriching experience. It hosts master classes with
+                                    renowned film technicians and photo workshops with leading photographers. camera
+                                    brands, and mentors. GStudio also allows students to explore their interests and
+                                    hone their skills in a fun and engaging environment. Its range of activities is an
+                                    excellent way for students to develop their creative talents.</p>
+                                <h2>What is CC:</h2>
+                                <p class=" p1">GStudio's ChalanaChitram aims to provide the audience with a unique and
+                                    high-quality cinematic experience that combines art and technology to captivate
+                                    viewers. Creators may learn from experts in the field and become familiar with
+                                    cuttingedge filmmaking practices at ChalanaChitram.
+
+                                    GStudio has been around for 10 years, a significant accomplishment and evidence of
+                                    the team's commitment and diligence. The celebration this year will undoubtedly be a
+                                    memorable occasion and give many more artists a platform to explore the fields of
+                                    cinema and photography. GStudio has been a pioneer in advancing the art of
+                                    filmmaking during the course of its ten-year existence and has assisted in the
+                                    development of many talented
+
+                                    individuals.</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- </div> -->
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="masonry-container">
+                <!-- Image 1 -->
+                <div class="masonry-item">
+                    <img src="assets/img1.jpg" alt="Image 1">
+                    <div class="image-text">Video Editing Workshop </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="masonry-item">
+                    <img src="assets/img3.jpg" alt="Image 2">
+                    <div class="image-text">Photography Workshop</div>
+                </div>
+                <!-- Image 3 -->
+                <div class="masonry-item">
+                    <img src="assets/img2.jpg" alt="Image 3">
+                    <div class="image-text">Filming Workshop</div>
+                </div>
+                <!-- Image 4 -->
+                <div class="masonry-item">
+                    <img src="assets/vzj.jpg" alt="Image 4">
+                    <div class="image-text">Master classes</div>
+                </div>
+                <!-- Image 5 -->
+                <div class="masonry-item">
+                    <img src="assets/img4.jpg" alt="Image 5">
+                    <div class="image-text">Fun events</div>
+                </div>
+                <!-- Image 6 -->
+                <div class="masonry-item">
+                    <img src="assets/img5.jpg" alt="Image 6">
+                    <div class="image-text">Interviews</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="register">
+        <div class="container text-center register">
+            <a href="https://good-fox-reliably.ngrok-free.app/ccweb2/index.php"><button> Register
+                </button></a>
+        </div>
+    </section>
+
+    <br>
+    <footer class="bg-light text-white py-4">
+        <div class="container text-center" style="color: black;">
+            <p>Copyright © 2024 gstudio</p>
+            <button class="btn btn-light mx-2">contact us</button>
+            <button class="btn btn-light mx-2">about us</button>
+            <button class="btn btn-light mx-2">suggestions</button>
+        </div>
+    </footer>
+    <script>
+      // JavaScript to change navbar background color on scroll
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+          var navbar = document.getElementById("navbar");
+          if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+              navbar.classList.remove("bg-transparent");
+              navbar.classList.add("bg-white");
+              document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                  link.style.color = '#333'; // Change to desired color when navbar is white
+              });
+          } else {
+              navbar.classList.remove("bg-white");
+              navbar.classList.add("bg-transparent");
+              document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                  link.style.color = '#fff'; // Change to desired color when navbar is transparent
+              });
+          }
+      }
+  </script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
