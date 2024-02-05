@@ -291,6 +291,13 @@ body {
     body {
         font-family: 'Titania', sans-serif; /* Use the font family */
     }
+    .container {
+    max-width: 100%; /* Set the container width to 100% */
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 
 
@@ -374,6 +381,34 @@ body {
 
 
 </section>
+<!-- New section for muted and autoplay YouTube embed -->
+<!-- New section for muted, autoplay, and looped YouTube embed -->
+<section id="youtube-video" class="py-5">
+  <div class="container">
+          <div class="row align-items-center my-5 py-5 mx-2">
+              <div class="embed-responsive embed-responsive-16by9">
+                  <!-- Corrected URL with mute and autoplay parameters -->
+                  <iframe id="youtube-iframe" class="embed-responsive-item" src="https://www.youtube.com/embed/JlG4TOVZEHI?si=fATdL9UetboWBa5&mute=1&autoplay=1" allowfullscreen></iframe>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- JavaScript code for looping the video -->
+<script>
+// Get the iframe element
+var youtubeIframe = document.getElementById('youtube-iframe');
+
+// Add event listener for when the video ends
+youtubeIframe.addEventListener('ended', function() {
+    // Reload the video to loop it
+    youtubeIframe.src += '&autoplay=1';
+});
+</script>
+
+
+
     <br>
 
       <section id="about">
@@ -497,7 +532,7 @@ body {
 
     <section id="register">
         <div class="container text-center register">
-            <a href="#"><button> Register
+            <a href="https://good-fox-reliably.ngrok-free.app/ccweb2/index.php"><button> Register
                 </button></a>
         </div>
     </section>
@@ -547,7 +582,7 @@ Join our intern program to be part of building the Technology.
           </div>
         </div>
         <div class="text-muted py-3">
-          <p>Copyright © ChalanaChitram 2024 | All Rights Reserved</p>
+          <p>Copyright © leisurecomputers Pvt.Ltd 2022 | All Rights Reserved</p>
         </div>
       </div>
     </footer>
